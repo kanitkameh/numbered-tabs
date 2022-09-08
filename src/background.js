@@ -44,9 +44,7 @@ function updateTab( tab, allTabs ) {
   /* logic for redoing title with numeric prefix */
 	const prefixRegEx = /^[0-9-]+. /g
 	const num = index + 1
-	let newPrefix = num <= 8 ? `${num}. ` :
-					        num >= 9 && num === numTabs ? '9. ' :
-					        '-. '
+	let newPrefix = `${num}. `
 
 	const hasPrefix = prefixRegEx.exec( title )
 	if ( hasPrefix && hasPrefix[0] && hasPrefix[0] === newPrefix ) {
@@ -58,13 +56,13 @@ function updateTab( tab, allTabs ) {
 		// title has no prefix (new tab)
 		newPrefix += title
 	}
-
 	try {
 		const script = { code : `document.title = '${newPrefix}'` }
 		chrome.tabs.executeScript( id, script )
 	} catch ( e ) {
 		console.error( e )
 	}
+
 }
 
 /**
