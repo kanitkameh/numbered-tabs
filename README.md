@@ -2,6 +2,7 @@
 
 A simple chrome extension that adds a number before the tab title.  
 Helpful for those who use the keyboard shortcut `⌘ + <num>` to switch between tabs.
+Has no limit on the number of tabs which have a number in front of them.
 
 ![example-image](image.png)
 
@@ -15,6 +16,6 @@ Examples of pages with the `chrome://` URL include the following:
 
 ## Acknolwedgements
 
-This extension is based off the extension [01. Tabs](https://chrome.google.com/webstore/detail/01-tabs/ennmnifpnkbipkcamokebcjmofhbiiil?hl=en).  
-I build this to solve the bugs in that extension.
+This extension is a fork based on the extension [numbered-tabs](https://github.com/narinluangrath/numbered-tabs).  
+I build this to remove the limit it had to number up to only 9 tabs.
 
